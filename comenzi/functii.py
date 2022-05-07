@@ -21,11 +21,11 @@ def genereaza_id_comanda(detalii_comanda):
 
 
 def adauga_o_comanda():
+    with open("baza_de_date/marketplace.json", "r") as j:
+        d = json.load(j)
     while True:
-        Idcomanda = str(genereaza_id_comanda(json.dumps("ceva")))
         data_inregistrare = str(datetime.datetime.now())
         id_comanda = {
-            "id_comanda" : Idcomanda,
             "data_inregristrare": data_inregistrare,
             "detalii_comanda": []
         }
@@ -46,13 +46,15 @@ def adauga_o_comanda():
             id_comanda["detalii_comanda"].append({idProdus: cantitatea})
             alt_produs = str(input("Doriti sa mai adaugati un produs DA/NU: "))
 
-        with open("baza_de_date/marketplace.json", "r") as j:
-            d = json.load(j)
-            d["comenzi"][Idcomanda] = id_comanda
-        with open("baza_de_date/marketplace.json", "w") as j:
-            j.write(json.dumps(d, indent=4))
+        
+        Idcomanda = str(genereaza_id_comanda(json.dumps(id_comanda)))
+        id_comanda["id_comanda"] = Idcomanda
+        d["comenzi"][Idcomanda] = id_comanda
         if alt_produs == "NU":
             break
+    
+    with open("baza_de_date/marketplace.json", "w") as j:
+        j.write(json.dumps(d, indent=4))
     """
     Introdu de la tastatura cu textul: "Introduceti produsele din comanda. Pentru a termina, introduceti 'stop':\n"
     Ca prim input dam Produsul, apoi Cantitatea
