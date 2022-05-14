@@ -21,12 +21,12 @@ def genereaza_id_produs(nume_produs, pret, cantitate):
 
 def adauga_un_produs():
     while True:
-        nume_produs = str(input("Introduceti numele produsului de adaugat: "))
-        pret = str(input("Introduceti pretul produsului de adaugat: "))
-        cantitate = str(input("Introduceti cantitatea produsului de adaugat: "))
-        id_produs = str(genereaza_id_produs(nume_produs, pret, cantitate))
-        data_inregistrare = str(datetime.datetime.now())
+        nume_produs = input("Introduceti numele produsului de adaugat: ")
         if len(nume_produs) in range(0, 51):
+            pret = input("Introduceti pretul produsului de adaugat: ")
+            cantitate = input("Introduceti cantitatea produsului de adaugat: ")
+            id_produs = str(genereaza_id_produs(nume_produs, pret, cantitate))
+            data_inregistrare = str(datetime.datetime.now())
             with open("baza_de_date/marketplace.json", "r") as j:
                 d = json.load(j)
                 d["produse"][id_produs] = {
@@ -37,12 +37,11 @@ def adauga_un_produs():
                 }
             with open("baza_de_date/marketplace.json", "w") as j:
                 j.write(json.dumps(d, indent=4))
-            alt_produs = str(input("Doriti sa mai adaugati un produs DA/NU: "))
+            alt_produs = input("Doriti sa adaugati alt produs? (DA/NU): ")
             if alt_produs == "NU":
                 break
         else:
-            print("Nume Invalid - Lungimea numelui trebuie sa fie intre 1 si 50 de caractere!\n"
-                f"{nume_produs}")
+            print("Nume Invalid - Lungimea numelui trebuie sa aiba intre 1 si 50 de caractere!")
 
     # '''
     # Introdu de la tastatura cu textul 'Introduceti numele produsului de adaugat: '
@@ -70,20 +69,18 @@ def listeaza_toate_produsele():
 
 def sterge_produs():
     while True:
-        produs_de_sters = str(input("Introduceti produsul pe care doriti sa il stergeti din lista: "))
+        produs_de_sters = input("Introduceti produsul pe care doriti sa il stergeti din lista: ")
         with open("baza_de_date/marketplace.json", "r") as j:
             d = json.load(j)
-            flag = False
             for i in d["produse"]:
                 if d["produse"][i]["nume produs"] == produs_de_sters:
-                    flag = True
                     del d["produse"][i]
                     break
-            if not flag:
-                print(f"Produs inexistent!")
+            else:
+                print("Produs inexistent!")
         with open("baza_de_date/marketplace.json", "w") as j:
             j.write(json.dumps(d, indent=4))
-        alt_produs = str(input("Doriti sa mai stergeti alt produs?DA/NU: "))
+        alt_produs = input("Doriti sa stergeti alt produs? (DA/NU): ")
         if alt_produs == "NU":
             break
 

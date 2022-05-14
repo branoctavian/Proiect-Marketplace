@@ -9,7 +9,7 @@ if __name__ == '__main__':
     maparea_comenzilor_la_functii = {
         "adauga_utilizator": adauga_un_utilizator,
         "listeaza_utilizatori": listeaza_toti_utilizatorii,
-        "șterge_utilizator": sterge_un_utilizator,
+        "sterge_utilizator": sterge_un_utilizator,
         "adauga_comanda": adauga_o_comanda,
         "listeaza_comenzi": listeaza_toate_comenzile,
         "sterge_comanda": sterge_o_comanda,

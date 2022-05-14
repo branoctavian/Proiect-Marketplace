@@ -24,11 +24,11 @@ def genereaza_id_utilizator(nume, email):
 
 def adauga_un_utilizator():
     while True:
-        nume = str(input("Introduceti numele dvs.: "))
-        email = str(input("Introduceti adresa dvs. de e-mail: "))
-        id_produs = str(genereaza_id_utilizator(nume, email))
-        data_inregistrare = str(datetime.datetime.now())
+        nume = input("Introduceti numele dvs.: ")
         if len(nume) in range(0, 51):
+            email = input("Introduceti adresa dvs. de e-mail: ")
+            id_produs = str(genereaza_id_utilizator(nume, email))
+            data_inregistrare = str(datetime.datetime.now())
             with open("baza_de_date/marketplace.json", "r") as j:
                 d = json.load(j)
                 d["utilizatori"][id_produs] = {
@@ -38,12 +38,11 @@ def adauga_un_utilizator():
                 }
             with open("baza_de_date/marketplace.json", "w") as j:
                 j.write(json.dumps(d, indent=4))
-            alt_utilizator = str(input("Doriti sa mai adaugati un alt utilizator DA/NU: "))
+            alt_utilizator = input("Doriti sa adaugati alt utilizator? (DA/NU): ")
             if alt_utilizator == "NU":
                 break
         else:
-            print("Nume Invalid - Lungimea numelui trebuie sa fie intre 1 si 50 de caractere!\n"
-                f"{nume}")
+            print("Nume Invalid - Lungimea numelui trebuie sa aiba intre 1 si 50 de caractere!")
     """
     Introdu de la tastatura cu textul 'Introduceti numele produsului de adaugat: '
         Daca limitele lungimii numelui unui produs e intre 1 si 50 caractere
@@ -70,20 +69,18 @@ def listeaza_toti_utilizatorii():
 
 def sterge_un_utilizator():
     while True:
-        utilizator_de_sters = str(input("Introduceti utilizatorul pe care doriti sa il stergeti din lista: "))
+        utilizator_de_sters = input("Introduceti utilizatorul pe care doriti sa il stergeti din lista: ")
         with open("baza_de_date/marketplace.json", "r") as j:
             d = json.load(j)
-            flag = False
             for i in d["utilizatori"]:
                 if d["utilizatori"][i]["nume"] == utilizator_de_sters:
-                    flag = True
                     del d["utilizatori"][i]
                     break
-            if not flag:
-                print(f"Utilizator inexistent!")
+            else:
+                print("Utilizator inexistent!")
         with open("baza_de_date/marketplace.json", "w") as j:
             j.write(json.dumps(d, indent=4))
-        alt_utilizator = str(input("Doriti sa mai stergeti un alt utilizator?DA/NU: "))
+        alt_utilizator = input("Doriti sa stergeti alt utilizator? (DA/NU): ")
         if alt_utilizator == "NU":
             break
     pass
