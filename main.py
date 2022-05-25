@@ -1,6 +1,6 @@
 from comenzi.functii import listeaza_toate_comenzile, adauga_o_comanda, sterge_o_comanda, modifica_comanda
-from produse.functii import adauga_un_produs, listeaza_toate_produsele, sterge_produs
-from utilizatori.functii import listeaza_toti_utilizatorii, adauga_un_utilizator, sterge_un_utilizator
+from produse.functii import adauga_un_produs, listeaza_toate_produsele, sterge_produs, modifica_date_produs
+from utilizatori.functii import listeaza_toti_utilizatorii, adauga_un_utilizator, sterge_un_utilizator, modifica_date_utilizator
 
 if __name__ == '__main__':
     def mesaj_de_iesire():
@@ -9,6 +9,7 @@ if __name__ == '__main__':
     maparea_comenzilor_la_functii = {
         "adauga_utilizator": adauga_un_utilizator,
         "listeaza_utilizatori": listeaza_toti_utilizatorii,
+        "modifica_utilizator": modifica_date_utilizator,
         "sterge_utilizator": sterge_un_utilizator,
         "adauga_comanda": adauga_o_comanda,
         "listeaza_comenzi": listeaza_toate_comenzile,
@@ -17,6 +18,7 @@ if __name__ == '__main__':
         "adauga_produs": adauga_un_produs,
         "sterge_produs": sterge_produs,
         "listeaza_produse": listeaza_toate_produsele,
+        "modifica_produs": modifica_date_produs,
         "exit": mesaj_de_iesire
     }
     actiune = None

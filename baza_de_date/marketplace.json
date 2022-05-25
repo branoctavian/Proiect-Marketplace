@@ -1,130 +1,91 @@
 {
     "utilizatori": {
         "0c9f348adae2d16224db2d10139efd68": {
-            "nume": "yolo",
-            "email": "yolo@gmail.com",
-            "data_inregistrare": "2021-08-31T01:19:59.543850+03:00"
+            "nume": "yono",
+            "email": "yono@gmail.com",
+            "data_inregistrare": "2021-08-31T01:19:59.543850+03:00",
+            "data ultimei modificari": "2022-05-23 19:08:52.205486"
+        },
+        "3929bb3ee8d672dc423e8bfcd21f9420": {
+            "nume": "Bran",
+            "email": "branoctavian@yahoo.com",
+            "data inregistrare": "2022-05-23 18:40:00.971803"
+        },
+        "e34d1b84721938d990430b643e4e34d8": {
+            "nume": "Octavian",
+            "email": "octavianbran@yahoo.com",
+            "data inregistrare": "2022-05-23 18:40:16.791827"
         }
     },
     "produse": {
-        "a9fd187f11f2ed492890b1b92a84578e": {
-            "nume produs": "telefoane",
-            "pret": "500",
-            "cantitate": "12",
-            "data inregistrare": "2022-05-13 15:16:34.883595"
+        "1c7633f7777420120ebcfff3f9023bd8": {
+            "nume produs": "arme",
+            "pret": 10,
+            "cantitate": 99,
+            "data inregistrare": "2022-05-23 12:54:05.282508"
         },
-        "90251ce52d7f0fdc070c01e774ea25e1": {
-            "nume produs": "ceasuri",
-            "pret": "900",
-            "cantitate": "14",
-            "data inregistrare": "2022-05-13 15:16:55.837644"
-        },
-        "5f3a5c42f085c1328d5bd265aa40f432": {
+        "68829d6339d1ac86aae2fb46d97a19de": {
             "nume produs": "incarcator",
-            "pret": "10",
-            "cantitate": "13",
-            "data inregistrare": "2022-05-13 15:17:11.724750"
+            "pret": 10,
+            "cantitate": 100,
+            "data inregistrare": "2022-05-23 12:55:28.376973"
+        },
+        "76dd1d8eb7223710a4d1bdc87d121d16": {
+            "nume produs": "telefon",
+            "pret": 10,
+            "cantitate": 100,
+            "data inregistrare": "2022-05-23 12:56:21.083210"
+        },
+        "11aa0e36ed724fa68df19b63fb46c3ed": {
+            "nume produs": "ceas",
+            "pret": 10,
+            "cantitate": 100,
+            "data inregistrare": "2022-05-23 12:56:35.989429"
+        },
+        "94e4be15c33feb906fd350f14a49e33e": {
+            "nume produs": "masini",
+            "pret": 10,
+            "cantitate": 100,
+            "data inregistrare": "2022-05-23 21:33:05.737298"
+        },
+        "b00cf835b58b5e0dbe5c451980c636d0": {
+            "nume produs": "gaini",
+            "pret": 10,
+            "cantitate": 100,
+            "data inregistrare": "2022-05-23 21:35:56.591117"
+        },
+        "346c50d389c99b30cac84368c1cdd8db": {
+            "nume produs": "tablete",
+            "pret": 10,
+            "cantitate": 100,
+            "data inregistrare": "2022-05-23 21:36:10.309119"
         }
     },
     "comenzi": {
-        "c6067649270f2621a57d881b70852691": {
-            "id_comanda": "c6067649270f2621a57d881b70852691",
-            "data_inregristrare": "2022-05-13 15:18:13.587293",
+        "eb5a9d41b2252bbf7f10aa40b8583dbe": {
+            "id_comanda": "eb5a9d41b2252bbf7f10aa40b8583dbe",
+            "data_inregistrare": "2022-05-24 11:27:02.276912",
             "detalii_comanda": [
                 {
-                    "a9fd187f11f2ed492890b1b92a84578e": 1
-                },
-                {
-                    "90251ce52d7f0fdc070c01e774ea25e1": 1
-                },
-                {
-                    "5f3a5c42f085c1328d5bd265aa40f432": 1
-                },
-                {
-                    "90251ce52d7f0fdc070c01e774ea25e1": 1
-                },
-                {
-                    "a9fd187f11f2ed492890b1b92a84578e": 14
+                    "1c7633f7777420120ebcfff3f9023bd8": 1
                 }
-            ]
+            ],
+            "total_plata": 10,
+            "data ultimei modificari": "2022-05-25 12:02:29.991484"
         },
-        "1ca6902fa48574e9cfd95c7d08c4d443": {
-            "id_comanda": "1ca6902fa48574e9cfd95c7d08c4d443",
-            "data_inregristrare": "2022-05-13 15:23:23.046782",
+        "f3975b3eeeb25452ed7adb60694df925": {
+            "id_comanda": "f3975b3eeeb25452ed7adb60694df925",
+            "data_inregistrare": "2022-05-24 12:00:19.228779",
             "detalii_comanda": [
                 {
-                    "a9fd187f11f2ed492890b1b92a84578e": 1
+                    "94e4be15c33feb906fd350f14a49e33e": 0
                 },
                 {
-                    "90251ce52d7f0fdc070c01e774ea25e1": 3
-                },
-                {
-                    "5f3a5c42f085c1328d5bd265aa40f432": 3
-                },
-                {
-                    "90251ce52d7f0fdc070c01e774ea25e1": 23
+                    "11aa0e36ed724fa68df19b63fb46c3ed": 0
                 }
-            ]
-        },
-        "e35ff2cf3967b9908eb6d829ebb93ea8": {
-            "id_comanda": "e35ff2cf3967b9908eb6d829ebb93ea8",
-            "data_inregristrare": "2022-05-13 15:25:22.801421",
-            "detalii_comanda": [
-                {
-                    "a9fd187f11f2ed492890b1b92a84578e": 4
-                },
-                {
-                    "5f3a5c42f085c1328d5bd265aa40f432": 7
-                },
-                {
-                    "90251ce52d7f0fdc070c01e774ea25e1": 34
-                }
-            ]
-        },
-        "e86eb78fe4e90cc49317b9f8b9bec3e1": {
-            "id_comanda": "732ff08707b83a5dfa19fb026d027c38",
-            "data_inregristrare": "2022-05-13 15:27:24.138827",
-            "detalii_comanda": [
-                {
-                    "a9fd187f11f2ed492890b1b92a84578e": 9
-                },
-                {
-                    "5f3a5c42f085c1328d5bd265aa40f432": 13
-                },
-                {
-                    "90251ce52d7f0fdc070c01e774ea25e1": 91
-                }
-            ]
-        },
-        "126380a414e2080b77f69332a37b680c": {
-            "id_comanda": "732ff08707b83a5dfa19fb026d027c38",
-            "data_inregristrare": "2022-05-13 15:27:24.138827",
-            "detalii_comanda": [
-                {
-                    "a9fd187f11f2ed492890b1b92a84578e": 9
-                },
-                {
-                    "5f3a5c42f085c1328d5bd265aa40f432": 13
-                },
-                {
-                    "90251ce52d7f0fdc070c01e774ea25e1": 91
-                }
-            ]
-        },
-        "732ff08707b83a5dfa19fb026d027c38": {
-            "id_comanda": "732ff08707b83a5dfa19fb026d027c38",
-            "data_inregristrare": "2022-05-13 15:27:24.138827",
-            "detalii_comanda": [
-                {
-                    "90251ce52d7f0fdc070c01e774ea25e1": 1
-                },
-                {
-                    "90251ce52d7f0fdc070c01e774ea25e1": 1
-                },
-                {
-                    "a9fd187f11f2ed492890b1b92a84578e": 21
-                }
-            ]
+            ],
+            "total_plata": 0,
+            "data ultimei modificari": "2022-05-25 11:38:03.907531"
         }
     }
 }
